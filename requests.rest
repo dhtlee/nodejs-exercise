@@ -1,0 +1,49 @@
+### Test
+GET http://localhost:3000/
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "daniel"
+}
+
+###
+
+GET http://localhost:3000/acronym?from=0&limit=3&search=YA
+
+###
+
+GET http://localhost:3000/acronym/@TEOTD
+
+###
+
+GET http://localhost:3000/random/5
+
+###
+
+POST http://localhost:3000/acronym
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZGFuaWVsIiwic2NvcGVzIjpbImRiLnJlYWQiLCJkYi53cml0ZSJdLCJpYXQiOjE2NjY1ODEyNzd9.hYYMPJ4uq4_1XBO3phs94U-Xw13Mw3i8uXkmM2pbSGk
+
+{
+    "key": "?abc",
+    "value": "abc123"
+}
+
+###
+
+PUT http://localhost:3000/acronym/%3Fabc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZGFuaWVsIiwic2NvcGVzIjpbImRiLnJlYWQiLCJkYi53cml0ZSJdLCJpYXQiOjE2NjY1ODEyNzd9.hYYMPJ4uq4_1XBO3phs94U-Xw13Mw3i8uXkmM2pbSGk
+
+{
+    "value": "modifiedabc"
+}
+
+###
+
+DELETE http://localhost:3000/acronym/%3Fabc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZGFuaWVsIiwic2NvcGVzIjpbImRiLnJlYWQiLCJkYi53cml0ZSJdLCJpYXQiOjE2NjY1ODEyNzd9.hYYMPJ4uq4_1XBO3phs94U-Xw13Mw3i8uXkmM2pbSGk
